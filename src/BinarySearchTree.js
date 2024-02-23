@@ -26,11 +26,13 @@ class BinarySearchTree {
         }
         current = current.left;
       }
-      if (!current.right) {
-        current.right = node;
-        return this;
+      if (val > current.value) {
+        if (!current.right) {
+          current.right = node;
+          return this;
+        }
+        current = current.right;
       }
-      current = current.right;
     }
   }
   contains(val) {
@@ -61,6 +63,63 @@ class BinarySearchTree {
       }
     }
     return found;
+  }
+  BFS() {
+    let queue = [];
+    let visitedNodes = [];
+
+    queue.push(this.root);
+    while (queue.length) {
+      let removedNode = queue.shift();
+      visitedNodes.push(removedNode.value);
+
+      if (removedNode.left) {
+        queue.push(removedNode.left);
+      }
+      if (removedNode.right) {
+        queue.push(removedNode.right);
+      }
+    }
+    return visitedNodes;
+  }
+  DFSPreOrder() {
+    let data = [];
+
+    function traverse(node) {
+      data.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+
+    return data;
+  }
+  DFSPostOrder() {
+    let data = [];
+
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      data.push(node.value);
+    }
+
+    traverse(this.root);
+
+    return data;
+  }
+  DFSInOrder() {
+    let data = [];
+
+    function traverse(node) {
+      if(node.left) traverse(node.left)
+      data.push(node.value)
+      if(node.right) traverse(node.right)
+
+    }
+
+    traverse(this.root);
+
+    return data;
   }
 }
 

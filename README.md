@@ -82,3 +82,35 @@
 
 - Insertion - O(log n)
 - Searching - O(log n)
+
+
+### TREE TRAVERSAL
+
+- A data structure that consists of nodes in a parent / child relationship.
+- Are non-linear data structures that contain a root and child nodes
+
+##### Two main approaches
+
+- **Breadth-first Search** - working across the tree/visiting nodes on the same level before moving down
+- **Depth-first Search** - working down the tree before visiting sibling nodes
+  - **PreOrder** - follows the root-left-right policy where
+    - the root node of the subtree is visited first
+    - then the left subtree is traversed
+    - at last, the right subtree is traversed
+    - can be used to "export" a tree structure so that it is easily recontructed
+  - **PostOrder** - follows left-right-root policy such that for each node
+    - the left subtree is traversed first
+    - then the right subtree is traversed
+    - finally the root node of the tree is traversed
+  - **InOrder** - follows the left-root-right pattern, such that
+    - the left subtree is traversed first
+    - then the root node of that subtree is traversed
+    - finally, the right subtree is traversed
+    - used commonly in BST's, we get all nodes in the tree in their underlying order (lowest to largest)
+
+
+##### BFS vs DFS
+- DFS has fewer nodes to keep track of
+- BFS uses a queue and if there are alot of nodes it will increase space complexity
+- Time complaxity is the same
+
