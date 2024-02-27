@@ -83,6 +83,7 @@
 - Insertion - O(log n)
 - Searching - O(log n)
 
+---
 
 ### TREE TRAVERSAL
 
@@ -114,3 +115,33 @@
 - BFS uses a queue and if there are alot of nodes it will increase space complexity
 - Time complaxity is the same
 
+---
+
+### BINARY HEAP
+- Type of a heap which is a type of a tree
+- Very similar to a binary search tree, but with some different rules.
+- In a **MaxBinaryHeap**, parent nodes are always larger than child node.
+- In a **MinBinaryHeap**, parent nodes are always smaller than child nodes.
+
+##### Max Binary Heap
+- Each parent has at most 2 child nodes.
+- The value of each parent node is always greater than its child nodes.
+- In a max Binary Heap the parent is greater than the children, but there are no guarentees between sibling nodes.
+- A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first.
+
+##### Usage
+
+- Binary Heaps are used to implement Priority Queues which are very commonly used data structures.
+- Used with graph traversal algorithms.
+
+#### Priority Queue
+- A data structure where each element has a priority.
+- Elements with higher priorities are served before elements with lower priorities.
+- They are separate from a heap, are just an abstract concept.
+
+
+##### BIG O of Binary Heaps
+
+- Insertion - O(log N)
+- Removal - O(log N)
+- Searching - O(N)
