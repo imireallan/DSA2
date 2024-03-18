@@ -145,3 +145,27 @@
 - Insertion - O(log N)
 - Removal - O(log N)
 - Searching - O(N)
+
+
+---
+
+### HASH TABLES
+- collections of key-value pairs
+- keys are not ordered
+
+#### What makes a good hash function
+- Fast (i.e constant time)
+- Doesn't cluter outputs at specific indices, but distributes uniformly
+- Deterministic, same input yields same output
+
+
+#### Dealing with collisions in a hash function
+- Separate chaining - at each index in our array we store values using a more sophisticated data structure (e.g an array or a linked list)
+- Linear probing - when we find a collision, we search through the array to find the next empty slot
+
+
+##### BIG O of Hash Tables
+(depends on how good the hash function is)
+- Insertion - O(1)
+- Deletion - O(1)
+- Access - O(1)
