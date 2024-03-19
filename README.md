@@ -169,3 +169,48 @@
 - Insertion - O(1)
 - Deletion - O(1)
 - Access - O(1)
+
+
+---
+
+### Graphs
+- Collection of nodes and connections between them
+
+
+#### Graph Terms
+- **Vertex** - a node
+- **Edge** - connection between nodes
+- **Weighted/Unweighted** - values assigned to distances between vertices.
+  - Unweighted - has no value associated with an edge
+  - Weighted - has value associated with an edge
+- **Directed/Undirected** - directions assigned to distances between vertices
+  - Undirected - There is 2-way connections, no direction assigned to the edges
+  - Directed - There is a direction assigned to the edges
+
+#### Usage
+- Social networks
+- Location / Mapping
+- Routing Algorithms
+- Visual Hierarchy
+- File System Optimizations
+- Recommendations
+
+#### Storing/Presenting a graph
+- Adjacency matrix
+- Adjacency list
+
+#### Graph Traversal Uses
+- Peer to peer networking
+- Web crawlers
+- Finding 'closest' matches/recommendations
+- Shortest path problems
+  - GPS Navigation
+  - Solving mazes
+  - AI(shortest path to win the game)
+
+
+
+##### BIG O of Graphs
+- Insertion - 
+- Deletion - 
+- Access - 
